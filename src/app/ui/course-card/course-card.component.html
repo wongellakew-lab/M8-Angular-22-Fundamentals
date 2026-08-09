@@ -1,15 +1,15 @@
 <div class="card">
   <h3>
-    <a [routerLink]="['/courses', course().id]"> {{ course().title }} </a>
-    ({{ course().code }})
+    <a [routerLink]="['/courses', course().Id]"> {{ course().Title }} </a>
+    ({{ course().Code }})
   </h3>
-  <p>Enrolled {{ course().enrollmentCount }} of {{ course().maxCapacity }} seats</p>
-  <span class="badge" [class.closed]="course().enrollmentCount >= course().maxCapacity">
-    {{ course().enrollmentCount >= course().maxCapacity ? 'Full' : 'Accepting Enrollments' }}
+  <p>Enrolled {{ course().EnrollmentCount }} of {{ course().MaxCapacity }} seats</p>
+  <span class="badge" [class.closed]="course().EnrollmentCount >= course().MaxCapacity">
+    {{ course().EnrollmentCount >= course().MaxCapacity ? 'Full' : 'Accepting Enrollments' }}
   </span>
   <button
     (click)="enrollClicked.emit(course())"
-    [disabled]="course().enrollmentCount >= course().maxCapacity"
+    [disabled]="course().EnrollmentCount >= course().MaxCapacity"
   >
     Enroll
   </button>

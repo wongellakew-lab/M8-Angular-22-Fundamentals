@@ -1,12 +1,12 @@
 export interface Course {
-  id: number;
-  code: string;
-  title: string;
-  maxCapacity: number;
-  enrollmentCount: number;
+  Id: number;
+  Code: string;
+  Title: string;
+  MaxCapacity: number;
+  EnrollmentCount: number;
 }
 export interface PagedResponse<T> {
-  items: T[];
+  data: T[];
   totalCount: number;
   page: number;
   pageSize: number;
